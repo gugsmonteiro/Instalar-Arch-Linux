@@ -1,13 +1,13 @@
 # Instalando Arch Linux e aprendendo sobre Linux no Processo
 ==========
 
-![ArchLinux](https://github.com/ALTGNULinux/installarch/blob/master/src/ArchLinux.png)
+![ArchLinux](https://github.com/tiagorlampert/InstalandoArchLinux/blob/master/src/ArchLinux.png)
 
 1 - Obtendo a ISO de instalação do Arch Linux
 ==========
 Você pode obter a ISO de instalação do Arch na [pagina de download] (https://www.archlinux.org/download/). Como trata-se de uma distribuição Rolling Release, é gerada uma ISO atualizada mensalmente. Após obter a instalação, grave a ISO em um CD ou Pen Drive e inicie a instalação.
 
-![ArchLinux](https://github.com/ALTGNULinux/installarch/blob/master/src/1.1.png)
+![ArchLinux](https://github.com/tiagorlampert/InstalandoArchLinux/blob/master/src/1.1.png)
 
 Após iniciar a instalação, verifique se você tem conexão com a internet (utilizarei conexão cabeada durante o procedimento). Teste com o seguinte comando:
 >
@@ -32,7 +32,7 @@ Inicie o Cfdisk:
 >
 	cfdisk
 A interface de particionamento é essa:
-![ArchLinux](https://github.com/ALTGNULinux/installarch/blob/master/src/2.2.png)
+![ArchLinux](https://github.com/tiagorlampert/InstalandoArchLinux/blob/master/src/2.2.png)
 
 
 ### 2.1 MBR - BIOS
@@ -42,7 +42,7 @@ Sera criada a seguinte partição:
 	/dev/sda1	 como /		sera bootavel e com o tamanho que desejar
 
 No `cfdisk` devera ficar da seguinte forma:
-![ArchLinux2](https://github.com/ALTGNULinux/installarch/blob/master/src/2.3.png)
+![ArchLinux2](https://github.com/tiagorlampert/InstalandoArchLinux/blob/master/src/2.3.png)
 
 Se tudo estiver correto grave as alterações no disco.
 
@@ -62,7 +62,7 @@ Serão criadas as seguintes partições:
 	/dev/sda2	como /			com o tamanho que desejar
 
 No `cfdisk` devera ficar da seguinte forma:
-![ArchLinux2](https://github.com/ALTGNULinux/installarch/blob/master/src/2.4.png)
+![ArchLinux2](https://github.com/tiagorlampert/InstalandoArchLinux/blob/master/src/2.4.png)
 
 Se tudo estiver correto grave as alterações no disco.
 
@@ -87,11 +87,11 @@ Execute o seguinte comando:
 
 O Download ira começar...
 
-![ArchLinux](https://github.com/ALTGNULinux/installarch/blob/master/src/3.1.png)
+![ArchLinux](https://github.com/tiagorlampert/InstalandoArchLinux/blob/master/src/3.1.png)
 
 Aguarde o processo ser finalizado...
 
-![ArchLinux](https://github.com/ALTGNULinux/installarch/blob/master/src/3.2.png)
+![ArchLinux](https://github.com/tiagorlampert/InstalandoArchLinux/blob/master/src/3.2.png)
 
 Em seguida devemos gerar o nosso fstab que significa File System Table, que fica localizado em /etc/fstab. Ele define como as partições do disco e outros dispositivos serão montados. 
 
@@ -107,7 +107,7 @@ Caso desejar você pode visualizar o arquivo ou editá-lo com:
 	nano /mnt/etc/fstab
 
 Arquivo gerado pelo genfstab:
-![ArchLinux](https://github.com/ALTGNULinux/installarch/blob/master/src/3.3.png)
+![ArchLinux](https://github.com/tiagorlampert/InstalandoArchLinux/blob/master/src/3.3.png)
 
 4 - Configurando o Sistema
 ==========
@@ -117,7 +117,7 @@ Para isso devemos acessar o sistema, com o seguinte comando:
 	arch-chroot /mnt
 
 Após executar o comando deverá ficar assim:
-![ArchLinux](https://github.com/ALTGNULinux/installarch/blob/master/src/4.1.png)
+![ArchLinux](https://github.com/tiagorlampert/InstalandoArchLinux/blob/master/src/4.1.png)
 
 Agora devemos configurar o locales, para definir o nosso idioma e layout do teclado.
 Abra o arquivo /etc/locale.gen e remova o # da frente de pt_BR.UTF-8 UTF-8, ou referente ao idioma do seu teclado.
@@ -126,7 +126,7 @@ Abra o arquivo /etc/locale.gen e remova o # da frente de pt_BR.UTF-8 UTF-8, ou r
 	locale-gen
 
 Após realizar as modificações salve o arquivo.
-![ArchLinux](https://github.com/ALTGNULinux/installarch/blob/master/src/4.2.png)
+![ArchLinux](https://github.com/tiagorlampert/InstalandoArchLinux/blob/master/src/4.2.png)
 
 Em seguida iremos configurar o nosso idioma, criando o arquivo /etc/locale.conf (caso deseje utilizar um idioma diferente adapte o comando de acordo com o desejado).
 
@@ -136,7 +136,7 @@ Execute o comando, para definir o nosso idioma:
 	export LANG=pt_BR.UTF-8
 
 Foi criado o arquivo com os parâmetros passados no comando:
-![ArchLinux](https://github.com/ALTGNULinux/installarch/blob/master/src/4.3.png)
+![ArchLinux](https://github.com/tiagorlampert/InstalandoArchLinux/blob/master/src/4.3.png)
 
 Agora vamos configurar o fuso horário.
 Podem ser vistas, as regiões do Brazil com o seguinte comando:
@@ -198,13 +198,13 @@ E adicione ou descomente as linhas:
 
 Devera ficar assim:
 
-![ArchLinux](https://github.com/ALTGNULinux/installarch/blob/master/src/5.1.png)
+![ArchLinux](https://github.com/tiagorlampert/InstalandoArchLinux/blob/master/src/5.1.png)
 
 Vamos tambem alterar algumas configurações do pacman, isso é opcional. Vamos deixar as cores das fontes no terminal coloridas, e utilizar um pacman na barra de progresso.
 
 Exemplo:
 
-![ArchLinux](https://github.com/ALTGNULinux/installarch/blob/master/src/5.3.png)
+![ArchLinux](https://github.com/tiagorlampert/InstalandoArchLinux/blob/master/src/5.3.png)
 
 Abra o arquivo `pacman.conf` e descomente a linha Color e adicione ILoveCandy:
 Ficando assim:
@@ -216,4 +216,4 @@ Ficando assim:
 
 Dessa forma:
 
-![ArchLinux](https://github.com/ALTGNULinux/installarch/blob/master/src/5.2.png)
+![ArchLinux](https://github.com/tiagorlampert/InstalandoArchLinux/blob/master/src/5.2.png)
