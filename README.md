@@ -11,7 +11,7 @@ Você pode obter a ISO de instalação do Arch na [pagina de download] (https://
 
 Após iniciar a instalação, verifique se você tem conexão com a internet (utilizarei conexão cabeada durante o procedimento). Teste com o seguinte comando:
 >
-	ping 8.8.8.8 -c5
+	ping 8.8.8.8 -c3
 
 Caso você ainda não tenha conexão com a internet ative o dhcpcd com o comando:
 >
@@ -52,7 +52,7 @@ Execute os seguintes comandos:
 >
 	mkfs.ext4 /dev/sda1  (A partição selecionada será formatada em ext4)
 	mount /dev/sda1 /mnt (Será montada a partição em /mnt)
-	mkdir /mnt/home (Sera criada a home dentro de /mnt)
+	mkdir /mnt/home (Será criada a home dentro de /mnt)
 
 ### 2.2 GPT - UEFI
 
@@ -101,7 +101,7 @@ Para gerá-lo execute:
 >
 	genfstab /mnt >> /mnt/etc/fstab
 
-Caso desejar você pode visualizar o arquivo ou edita-lo com:
+Caso desejar você pode visualizar o arquivo ou editá-lo com:
 >
 	cat /mnt/etc/fstab
 	nano /mnt/etc/fstab
@@ -135,7 +135,7 @@ Execute o comando, para definir o nosso idioma:
 	echo LANG=pt_BR.UTF-8 > /etc/locale.conf
 	export LANG=pt_BR.UTF-8
 
-Foi criado o arquivo com os parametros passados no comando:
+Foi criado o arquivo com os parâmetros passados no comando:
 ![ArchLinux](https://github.com/ALTGNULinux/installarch/blob/master/src/4.3.png)
 
 Agora vamos configurar o fuso horário.
