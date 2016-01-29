@@ -1,0 +1,2 @@
+# InstalandoArchLinux
+Instalando Arch Linux
