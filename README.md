@@ -4,11 +4,11 @@
 ![ArchLinux](https://github.com/tiagorlampert/InstalandoArchLinux/blob/master/src/ArchLinux.png)
 
 Requisitos
-
-	* Conhecimento Básico em Shell
-	* Particionamento de Disco
-	* Conexão com a Internet
-	* Vontade
+==========
+ * Conhecimento Básico em Shell
+ * Particionamento de Disco
+ * Conexão com a Internet
+ * Vontade
 
 1 - Obtendo a ISO de instalação do Arch Linux
 ==========
