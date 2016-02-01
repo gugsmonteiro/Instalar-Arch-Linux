@@ -217,3 +217,52 @@ Ficando assim:
 Dessa forma:
 
 ![ArchLinux](https://github.com/tiagorlampert/InstalandoArchLinux/blob/master/src/6.2.png)
+
+7 - Finalizando a Instalação
+==========
+Pronto! =)
+
+Agora seu sistema já está instalado. Podemos sair da instalação, reiniciar e torcer para que tenha dado tudo certo.
+
+Execute os comandos:
+>
+	exit
+	umount -a
+	reboot
+
+8 - Configurando o Desktop
+==========
+Agora que o sistema ja esta instalado, iremos instalar o servidor grafico, drivers e softwares para que possamos instalar e configurar o nosso ambiente de trabalho. Irei instalar o GNOME por preferência. Você pode obter mais informações sobre outros ambientes de trabalho na [pagina oficial] (https://wiki.archlinux.org/index.php/desktop_environment).
+
+Execute os comandos abaixo para instalar o servidor grafico, suporte a 3D e audio.
+>
+	pacman -Sy (Atualize os repositórios)
+	pacman -S alsa-utils
+	pacman -S xorg-server xorg-xinit xorg-server-utils
+	pacman -S xf86-video-vesa
+	pacman -S mesa
+	pacman -S xorg-twm xorg-xclock xterm
+	pacman -S ttf-dejavu
+
+Vamos instalar o driver de video da Intel e suporte a Touchpad se for o seu caso:
+>
+	pacman -S xf86-video-intel
+	pacman -S xf86-input-synaptics
+
+Agora vamos instalar o GNOME:
+>
+	pacman -S gnome
+
+E habilitar a inicialização do GDM (Gnome Display Manager) com o sistema:
+>
+	systemctl enable gdm
+
+Vamos reiniciar:
+>
+	reboot
+
+![ArchLinux](https://github.com/tiagorlampert/InstalandoArchLinux/blob/master/src/print.png)
+
+** Instalação Finalizada!!! **
+
+Agora seu sistema está pronto para você configurar ao seu gosto!
