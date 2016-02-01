@@ -262,8 +262,16 @@ Vamos reiniciar:
 	reboot
 
 
-**Instalação Finalizada!!!**
 Agora seu sistema está pronto para você configurar ao seu gosto!
 ![ArchLinux](https://github.com/tiagorlampert/InstalandoArchLinux/blob/master/src/print.png)
 
+Caso tenha alguma duvida, podem ser obtidas mais informações no [guia para iniciantes] (https://wiki.archlinux.org/index.php/Beginners%27_guide).
+
+Estamos desenvolvendo o [ALPI] (https://github.com/tiagorlampert/alpi) que permite facilitar a configuração do sistema após a instalação. Caso queira testar para automatizar a configuração do sistema, você pode obtê-lo executando os seguintes comandos:
+>
+	pacman -Sy
+	pacman -S git wget
+	git clone https://github.com/tiagorlampert/alpi.git
+	cd alpi
+	./alpi.sh
 
