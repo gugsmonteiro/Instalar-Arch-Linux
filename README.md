@@ -344,7 +344,20 @@ E execute o makepkg para compilar o programa e instalar:
 >
 	makepkg -sic
 
-Após ter feito isso repita o procedimento com o Yaourt.
+***Após ter feito isso repita o procedimento com o Yaourt.***
 
 Isso é o básico para se saber como baixar e compilar um pacote manualmente do AUR.
 
+
+### 9.4 Yaourt (Yet AnOther User Repository Tool)
+
+Como as vezes o processo de compilação e instalação de um programa do AUR pode ser muito trabalhoso, devido a sua grande quantidade de dependências. Existem algumas ferramentas que fazem todo o trabalho "pesado" para nós. E uma delas se chama Yaourt.
+
+Essa ferramenta automatiza o acesso ao AUR para a busca e instalação de programas. Ele contem funções que o pacman por si só não possui.
+
+Para utilizar o yaourt, ao invés de usar `"pacman"`, substitua o comando por `"yaourt"`.
+
+Exemplo, para atualizar o sistema:
+>
+	pacman -Syu
+	yaourt -Syua
