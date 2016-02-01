@@ -378,6 +378,8 @@ Exemplo, para atualizar o sistema:
 10 - Finalizando
 ==========
 
+![ArchLinux](https://github.com/tiagorlampert/InstalandoArchLinux/blob/master/src/arch.png)
+
 Após instalar e configurar o básico no sistema ainda resta muita coisa para ser ajustada, é muito importante dar uma olhada em [guia para iniciantes] (https://wiki.archlinux.org/index.php/Beginners%27_guide) e [recomendações gerais] (https://wiki.archlinux.org/index.php/General_recommendations). E veja algo sobre o [pacman] (https://wiki.archlinux.org/index.php/pacman) que é o gerenciador de pacotes do sistema. É claro que a maioria das coisas você só irá aprender com a utilização do sistema, mas é importante ler a documentação da distribuição para se ter uma base teórica de como funciona o Arch.
 
 Arch Linux é um sistema altamente personalizavel, rapido e estavel. Como exige muito da parte do usuário, proporciona um alto nivel de aprendizagem. Permite ao usuário saber como o sistema foi montado, e ver realmente oque acontece no sistema. Você decide oque vai no sistema, não terá coisas desnecessárias que nunca vai chegar a utilizar rodando em seu sistema, sendo assim terá um sistema rápido e estavel. Para mais informações veja [O Jeito Arch] (https://wiki.archlinux.org/index.php/The_Arch_Way_%28Portugu%C3%AAs%29).
