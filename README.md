@@ -364,6 +364,8 @@ Isso é o básico para se saber como baixar e compilar um pacote manualmente do 
 
 ### 9.4 Yaourt (Yet AnOther User Repository Tool)
 
+![ArchLinux](https://github.com/tiagorlampert/InstalandoArchLinux/blob/master/src/yaourt.png)
+
 Como as vezes o processo de compilação e instalação de um programa do AUR pode ser muito trabalhoso, devido a sua grande quantidade de dependências. Existem algumas ferramentas que fazem todo o trabalho "pesado" para nós. E uma delas se chama Yaourt.
 
 Essa ferramenta automatiza o acesso ao AUR para a busca e instalação de programas. Ele contem funções que o pacman por si só não possui.
