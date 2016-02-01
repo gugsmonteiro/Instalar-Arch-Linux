@@ -3,8 +3,8 @@
 
 ![ArchLinux](https://github.com/tiagorlampert/InstalandoArchLinux/blob/master/src/ArchLinux.png)
 
-### Requisitos
->
+Requisitos
+
 	* Conhecimento Básico em Shell
 	* Particionamento de Disco
 	* Conexão com a Internet
