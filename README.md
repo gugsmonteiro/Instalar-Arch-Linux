@@ -286,4 +286,7 @@ Estamos desenvolvendo o [ALPI] (https://github.com/tiagorlampert/alpi) que permi
 
 9 - Gerenciando o Sistema
 ==========
-Após instalar e configurar o básico no sistema ainda resta muita coisa para ser configurada, eu indico o [guia para iniciantes] (https://wiki.archlinux.org/index.php/Beginners%27_guide) para se ter uma noção básica da configuração do sistema e [recomendações gerais] (https://wiki.archlinux.org/index.php/General_recommendations) é muito importante. E veja algo sobre o [pacman] (https://wiki.archlinux.org/index.php/pacman) que é o gerenciador de pacotes do sistema. É claro que a maioria das coisas alguem que seja iniciante, só ira aprender com a utilização do sistema, mas é importante ler a documentação da distribuição para se ter uma base teórica de como funciona o sistema. Irei abordar a seguir alguns comandos básicos para o gerenciador de pacotes.
+Após instalar e configurar o básico no sistema ainda resta muita coisa para ser configurada, eu indico o [guia para iniciantes] (https://wiki.archlinux.org/index.php/Beginners%27_guide) para se ter uma noção básica da configuração do sistema e [recomendações gerais] (https://wiki.archlinux.org/index.php/General_recommendations) é muito importante. E veja algo sobre o [pacman] (https://wiki.archlinux.org/index.php/pacman) que é o gerenciador de pacotes do sistema. É claro que a maioria das coisas você só irá aprender com a utilização do sistema, mas é importante ler a documentação da distribuição para se ter uma base teórica de como funciona o sistema. Irei abordar a seguir alguns comandos básicos para o gerenciador de pacotes.
+
+### 9.1 Pacman
+![ArchLinux](https://github.com/tiagorlampert/InstalandoArchLinux/blob/master/src/pacman.png)
