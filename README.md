@@ -244,6 +244,15 @@ Execute os comandos abaixo para instalar o servidor grafico, suporte a 3D e audi
 	pacman -S xorg-twm xorg-xclock xterm
 	pacman -S ttf-dejavu
 
+Vamos instalar o suporte a Wireless:
+>
+	pacman -S networkmanager network-manager-applet
+	systemctl enable NetworkManager.service
+
+Instalar suporte a outros tipos de sistemas de arquivos e discos:
+>
+	pacman -S dosfstools ntfs-3g nilfs-utils mtools gvfs-mtp gpart
+
 Vamos instalar o driver de video da Intel e suporte a Touchpad se for o seu caso:
 >
 	pacman -S xf86-video-intel
@@ -277,4 +286,4 @@ Estamos desenvolvendo o [ALPI] (https://github.com/tiagorlampert/alpi) que permi
 
 9 - Gerenciando o Sistema
 ==========
-
+Após instalar e configurar o básico no sistema ainda resta muita coisa para ser configurada, eu indico o [guia para iniciantes] (https://wiki.archlinux.org/index.php/Beginners%27_guide) para se ter uma noção básica da configuração do sistema e [recomendações gerais] (https://wiki.archlinux.org/index.php/General_recommendations) é muito importante. E veja algo sobre o [pacman] (https://wiki.archlinux.org/index.php/pacman) que é o gerenciador de pacotes do sistema. É claro que a maioria das coisas alguem que seja iniciante, só ira aprender com a utilização do sistema, mas é importante ler a documentação da distribuição para se ter uma base teórica de como funciona o sistema. Irei abordar a seguir alguns comandos básicos para o gerenciador de pacotes.
