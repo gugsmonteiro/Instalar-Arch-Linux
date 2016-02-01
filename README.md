@@ -25,7 +25,7 @@ Existem várias formas e ferramentas para se particionar o disco. Iremos utiliza
 
 **Tenha cuidado nessa parte!**
 
-***Em seguida particione o seu disco de acordo com o tipo que você utilizar, GPT ou MBR (estão separadas por partes no tutorial 2.1 e 2.2).***
+***Em seguida particione o seu disco de acordo com o tipo que você utilizar, GPT ou MBR (estão separadas por partes, 2.1 e 2.2).***
 
 
 Inicie o Cfdisk:
@@ -37,11 +37,11 @@ A interface de particionamento é essa:
 
 ### 2.1 MBR - BIOS
 
-Sera criada a seguinte partição:
+Será criada a seguinte partição:
 >
 	/dev/sda1	 como /		sera bootavel e com o tamanho que desejar
 
-No `cfdisk` devera ficar da seguinte forma:
+No `cfdisk` deverá ficar da seguinte forma:
 ![ArchLinux2](https://github.com/tiagorlampert/InstalandoArchLinux/blob/master/src/2.3.png)
 
 Se tudo estiver correto grave as alterações no disco.
@@ -111,7 +111,7 @@ Arquivo gerado pelo genfstab:
 
 4 - Configurando o Sistema
 ==========
-Após termos instalado o sistema e gerado o fstab, agora devemos realizar algumas configurações basicas.
+Após termos instalado o sistema e gerado o fstab, agora devemos realizar algumas configurações básicas.
 Para isso devemos acessar o sistema, com o seguinte comando:
 >
 	arch-chroot /mnt
@@ -139,11 +139,11 @@ Foi criado o arquivo com os parâmetros passados no comando:
 ![ArchLinux](https://github.com/tiagorlampert/InstalandoArchLinux/blob/master/src/4.3.png)
 
 Agora vamos configurar o fuso horário.
-Podem ser vistas, as regiões do Brazil com o seguinte comando:
+Podem ser vistas as regiões do Brazil com o seguinte comando:
 >
 	ls /usr/share/zoneinfo/Brazil
 
-No meu caso irei utilizar East, execute o comando para criar um link simbolico:
+No meu caso irei utilizar East, execute o comando para criar um link simbólico:
 >
 	ln -s /usr/share/zoneinfo/Brazil/East /etc/localtime
 
@@ -155,14 +155,14 @@ E definir uma senha de root:
 >
 	passwd
 
-4 - Instalando o Bootloader
+5 - Instalando o Bootloader
 ==========
 Iremos utilizar o grub, mas caso deseje utilizar outro bootloader podem ser obtidas mais informações na [pagina oficial] (https://wiki.archlinux.org/index.php/Boot_loaders).
 
 Da mesma maneira que no particionamento de disco, que foi dividido em duas partes GPT e MBR, a instalação do grub tambem será divida nessas duas partes. Prossiga de acordo com seu tipo de tabela de partição.
 
 ### 4.1 MBR - BIOS
-Sera instalado o Grub e os-prober que permite que sejam reconhecidos outros sistemas operacionais instalados na maquina. E em seguida geradas as configurações para o grub.
+Será instalado o Grub e os-prober que permite que sejam reconhecidos outros sistemas operacionais instalados na maquina. E em seguida geradas as configurações para o grub.
 
 Execute os seguintes comandos:
 >
@@ -172,7 +172,7 @@ Execute os seguintes comandos:
 	grub-mkconfig -o /boot/grub/grub.cfg
 
 ### 4.2 GPT - UEFI
-Sera instalado o Grub e os-prober que permite que sejam reconhecidos outros sistemas operacionais instalados na maquina. E em seguida geradas as configurações para o grub.
+Será instalado o Grub e os-prober que permite que sejam reconhecidos outros sistemas operacionais instalados na maquina. E em seguida geradas as configurações para o grub.
 
 Execute os seguintes comandos:
 >
@@ -181,13 +181,13 @@ Execute os seguintes comandos:
 	grub-mkconfig -o /boot/grub/grub.cfg
 	mkinitcpio -p linux
 
-5 - Configurando o Gerenciador de pacotes Pacman
+6 - Configurando o Gerenciador de pacotes Pacman
 ==========
 Definindo algumas configurações adicionais para seu gerenciador de pacotes.
 
 Vamos habilitar o repositório multilib, o qual permite ao usuário baixar e executar aplicações 32 e 64 bits.
 
-Abra o arquivo pacman.conf.
+Abra o arquivo pacman.conf que fica localizado em /etc.
 >
 	nano /etc/pacman.conf
 
@@ -196,15 +196,15 @@ E adicione ou descomente as linhas:
 	[multilib]
 	Include = /etc/pacman.d/mirrorlist
 
-Devera ficar assim:
+Deverá ficar assim:
 
-![ArchLinux](https://github.com/tiagorlampert/InstalandoArchLinux/blob/master/src/5.1.png)
+![ArchLinux](https://github.com/tiagorlampert/InstalandoArchLinux/blob/master/src/6.1.png)
 
 Vamos tambem alterar algumas configurações do pacman, isso é opcional. Vamos deixar as cores das fontes no terminal coloridas, e utilizar um pacman na barra de progresso.
 
 Exemplo:
 
-![ArchLinux](https://github.com/tiagorlampert/InstalandoArchLinux/blob/master/src/5.3.png)
+![ArchLinux](https://github.com/tiagorlampert/InstalandoArchLinux/blob/master/src/6.3.png)
 
 Abra o arquivo `pacman.conf` e descomente a linha Color e adicione ILoveCandy:
 Ficando assim:
@@ -216,4 +216,4 @@ Ficando assim:
 
 Dessa forma:
 
-![ArchLinux](https://github.com/tiagorlampert/InstalandoArchLinux/blob/master/src/5.2.png)
+![ArchLinux](https://github.com/tiagorlampert/InstalandoArchLinux/blob/master/src/6.2.png)
