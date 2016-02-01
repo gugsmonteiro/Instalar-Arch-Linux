@@ -291,7 +291,7 @@ Após instalar e configurar o básico no sistema ainda resta muita coisa para se
 ### 9.1 Pacman
 ![ArchLinux](https://github.com/tiagorlampert/InstalandoArchLinux/blob/master/src/pacman.png)
 
-Pacman é o nome do gerenciador de pacotes, o objetivo dele é tornar facil o gerenciamento de pacotes do sistema, ele utiliza pacotes binários `.pkg.tar.xz` com o uso de um sistema de compilação chamado ABS (que será abordado mais tarde).
+Pacman é o nome do gerenciador de pacotes, o objetivo dele é tornar mais facil o gerenciamento de pacotes do sistema, ele utiliza pacotes binários `.pkg.tar.xz` com o uso de um sistema de compilação chamado ABS (que será abordado mais tarde).
 
 Alguns comandos que podem ser utilizados:
 >
@@ -312,3 +312,38 @@ Alguns comandos que podem ser utilizados:
 	pacman -Sc = deleta do cache todos os pacotes antigos ;
 	pacman -A arquivo.pkg.tar.gz = instala um pacote local;
 	pacman -Scc = limpa o cache, removendo todos os pacotes existentes no /var/cache/pacman/pkg/.
+
+### 9.2 AUR (Arch User Repository)
+
+O AUR é um repositório mantido pela comunidade do Arch, e foi criado para organizar e criar novos pacotes. Ele contem PKGBUILDs que permitem ao usuário compilar pacotes utilizando o makepkg e depois instalar utilizando o pacman. Pode ser acessado no site https://aur.archlinux.org/.
+
+### 9.3 ABS (Arch Build System)
+
+O ABS é um sistema para compilação de pacotes a partir do código fonte. Enquanto o pacman utiliza binários, o ABS utiliza uma coleção de ferramentas para compilar fontes e gerar pacotes `.pkg.tar.xz`, instalaveis pelo pacman.
+
+Vamos ver como funciona o `makepkg` que é uma ferramenta que permite baixar e compilar fontes para criar pacotes `.pkg.tar.*`.
+
+Agora iremos obter o PKGBUILD de um programa chamado Yaourt direto do AUR, para então compilarmos e instalarmos ele. 
+
+Vamos baixar o PKGBUILD do yaourt e de outra dependencia dele:
+>
+	wget https://aur.archlinux.org/cgit/aur.git/snapshot/yaourt.tar.gz
+	wget https://aur.archlinux.org/cgit/aur.git/snapshot/package-query.tar.gz
+
+Após baixarmos, vamos extrair:
+>
+	tar -xvf *.tar.gz
+
+Entre dentro da pasta da dependência do Yaourt, chamada package-query:
+>
+	cd /package-query
+
+Detalhe importante, o makepkg não pode ser executado como root!
+E execute o makepkg para compilar o programa e instalar:
+>
+	makepkg -sic
+
+Após ter feito isso repita o procedimento com o Yaourt.
+
+Isso é o básico para se saber como baixar e compilar um pacote manualmente do AUR.
+
