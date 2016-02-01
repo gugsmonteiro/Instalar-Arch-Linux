@@ -286,7 +286,8 @@ Estamos desenvolvendo o [ALPI] (https://github.com/tiagorlampert/alpi) que permi
 
 9 - Gerenciando o Sistema
 ==========
-Após instalar e configurar o básico no sistema ainda resta muita coisa para ser ajustada, é muito importante dar uma olhada em [guia para iniciantes] (https://wiki.archlinux.org/index.php/Beginners%27_guide) e [recomendações gerais] (https://wiki.archlinux.org/index.php/General_recommendations). E veja algo sobre o [pacman] (https://wiki.archlinux.org/index.php/pacman) que é o gerenciador de pacotes do sistema. É claro que a maioria das coisas você só irá aprender com a utilização do sistema, mas é importante ler a documentação da distribuição para se ter uma base teórica de como funciona o sistema. Irei abordar a seguir alguns comandos básicos para o gerenciador de pacotes.
+
+Agora serão abordados alguns tópicos importantes e básicos de utilização do sistema, para o gerenciamento de pacotes.
 
 ### 9.1 Pacman
 ![ArchLinux](https://github.com/tiagorlampert/InstalandoArchLinux/blob/master/src/pacman.png)
@@ -361,3 +362,10 @@ Exemplo, para atualizar o sistema:
 >
 	pacman -Syu
 	yaourt -Syua
+
+10 - Finalizando
+==========
+
+Após instalar e configurar o básico no sistema ainda resta muita coisa para ser ajustada, é muito importante dar uma olhada em [guia para iniciantes] (https://wiki.archlinux.org/index.php/Beginners%27_guide) e [recomendações gerais] (https://wiki.archlinux.org/index.php/General_recommendations). E veja algo sobre o [pacman] (https://wiki.archlinux.org/index.php/pacman) que é o gerenciador de pacotes do sistema. É claro que a maioria das coisas você só irá aprender com a utilização do sistema, mas é importante ler a documentação da distribuição para se ter uma base teórica de como funciona o sistema.
+
+Arch Linux é um sistema altamente personalizavel, rapido e estavel. Como exige muito da parte do usuário, proporciona um alto nivel de aprendizagem. Permite ao usuário saber como o sistema foi montado, e ver realmente oque acontece no sistema. Você decide oque vai no sistema, não terá coisas desnecessárias que nunca vai chegar a utilizar rodando em seu sistema, sendo assim terá um sistema rápido e estavel. Para mais informações veja [O Jeito Arch] (https://wiki.archlinux.org/index.php/The_Arch_Way_%28Portugu%C3%AAs%29).
