@@ -168,7 +168,7 @@ Iremos utilizar o grub, mas caso deseje utilizar outro bootloader podem ser obti
 
 Da mesma maneira que no particionamento de disco, que foi dividido em duas partes GPT e MBR, a instalação do grub tambem será divida nessas duas partes. Prossiga de acordo com seu tipo de tabela de partição.
 
-### 4.1 MBR - BIOS
+### 5.1 MBR - BIOS
 Será instalado o Grub e os-prober que permite que sejam reconhecidos outros sistemas operacionais instalados na maquina. E em seguida geradas as configurações para o grub.
 
 Execute os seguintes comandos:
@@ -178,7 +178,7 @@ Execute os seguintes comandos:
 	mkinitcpio -p linux
 	grub-mkconfig -o /boot/grub/grub.cfg
 
-### 4.2 GPT - UEFI
+### 5.2 GPT - UEFI
 Será instalado o Grub e os-prober que permite que sejam reconhecidos outros sistemas operacionais instalados na maquina. E em seguida geradas as configurações para o grub.
 
 Execute os seguintes comandos:
@@ -324,7 +324,7 @@ Alguns comandos que podem ser utilizados:
 	pacman -Qo arquivo = mostra a qual pacote aquele arquivo pertence;
 	pacman -Sc = deleta do cache todos os pacotes antigos ;
 	pacman -A arquivo.pkg.tar.gz = instala um pacote local;
-	pacman -Scc = limpa o cache, removendo todos os pacotes existentes no /var/cache/pacman/pkg/.
+	pacman -Scc = limpa o cache, removendo todos os pacotes existentes no /var/cache/pacman/pkg/;
 
 ### 9.2 AUR (Arch User Repository)
 
