@@ -252,7 +252,7 @@ Vamos instalar o suporte a Wireless:
 Instalar suporte a outros tipos de sistemas de arquivos e discos:
 >
 	pacman -S dosfstools ntfs-3g nilfs-utils mtools gvfs-mtp gpart
-
+cd /package-query
 Vamos instalar o driver de video da Intel e suporte a Touchpad se for o seu caso:
 >
 	pacman -S xf86-video-intel
@@ -325,7 +325,7 @@ Vamos ver como funciona o `makepkg` que é uma ferramenta que permite baixar e c
 
 Agora iremos obter o PKGBUILD de um programa chamado Yaourt direto do AUR, para então compilarmos e instalarmos ele. 
 
-Vamos baixar o PKGBUILD do yaourt e de outra dependencia dele:
+Vamos baixar o PKGBUILD do Yaourt e de outra dependencia dele:
 >
 	wget https://aur.archlinux.org/cgit/aur.git/snapshot/yaourt.tar.gz
 	wget https://aur.archlinux.org/cgit/aur.git/snapshot/package-query.tar.gz
@@ -336,9 +336,10 @@ Após baixarmos, vamos extrair:
 
 Entre dentro da pasta da dependência do Yaourt, chamada package-query:
 >
-	cd /package-query
+	cd package-query
 
-Detalhe importante, o makepkg não pode ser executado como root!
+**Detalhe importante, o makepkg não pode ser executado como root!**
+
 E execute o makepkg para compilar o programa e instalar:
 >
 	makepkg -sic
