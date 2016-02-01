@@ -241,6 +241,11 @@ Execute os comandos:
 ==========
 Agora que o sistema já está instalado, iremos instalar o servidor grafico, drivers e softwares para que possamos instalar e configurar o nosso ambiente de trabalho. Irei instalar o GNOME por preferência. Você pode obter mais informações sobre outros ambientes de trabalho na [pagina oficial] (https://wiki.archlinux.org/index.php/desktop_environment).
 
+Caso você não tiver conexão com a internet, execute o seguinte comando:
+>
+	systemctl start dhcpcd
+	systemctl enable dhcpcd
+
 Execute os comandos abaixo para instalar o servidor grafico, suporte a 3D e audio.
 >
 	pacman -Sy (Atualiza os repositórios)
@@ -259,7 +264,7 @@ Vamos instalar o suporte a Wireless:
 Instalar suporte a outros tipos de sistemas de arquivos e discos:
 >
 	pacman -S dosfstools ntfs-3g nilfs-utils mtools gvfs-mtp gpart
-cd /package-query
+
 Vamos instalar o driver de video da Intel e suporte a Touchpad se for o seu caso:
 >
 	pacman -S xf86-video-intel
