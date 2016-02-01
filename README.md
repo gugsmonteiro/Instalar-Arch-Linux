@@ -220,9 +220,9 @@ Dessa forma:
 
 7 - Finalizando a Instalação
 ==========
-Pronto! =)
+Pronto!
 
-Agora seu sistema já está instalado. Podemos sair da instalação, reiniciar e torcer para que tenha dado tudo certo.
+Agora seu sistema já está instalado. Podemos sair da instalação e reiniciar.
 
 Execute os comandos:
 >
@@ -232,11 +232,11 @@ Execute os comandos:
 
 8 - Configurando o Desktop
 ==========
-Agora que o sistema ja esta instalado, iremos instalar o servidor grafico, drivers e softwares para que possamos instalar e configurar o nosso ambiente de trabalho. Irei instalar o GNOME por preferência. Você pode obter mais informações sobre outros ambientes de trabalho na [pagina oficial] (https://wiki.archlinux.org/index.php/desktop_environment).
+Agora que o sistema já está instalado, iremos instalar o servidor grafico, drivers e softwares para que possamos instalar e configurar o nosso ambiente de trabalho. Irei instalar o GNOME por preferência. Você pode obter mais informações sobre outros ambientes de trabalho na [pagina oficial] (https://wiki.archlinux.org/index.php/desktop_environment).
 
 Execute os comandos abaixo para instalar o servidor grafico, suporte a 3D e audio.
 >
-	pacman -Sy (Atualize os repositórios)
+	pacman -Sy (Atualiza os repositórios)
 	pacman -S alsa-utils
 	pacman -S xorg-server xorg-xinit xorg-server-utils
 	pacman -S xf86-video-vesa
@@ -261,8 +261,9 @@ Vamos reiniciar:
 >
 	reboot
 
+
+**Instalação Finalizada!!!**
+Agora seu sistema está pronto para você configurar ao seu gosto!
 ![ArchLinux](https://github.com/tiagorlampert/InstalandoArchLinux/blob/master/src/print.png)
 
-** Instalação Finalizada!!! **
 
-Agora seu sistema está pronto para você configurar ao seu gosto!
