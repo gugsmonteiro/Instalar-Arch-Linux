@@ -290,3 +290,25 @@ Após instalar e configurar o básico no sistema ainda resta muita coisa para se
 
 ### 9.1 Pacman
 ![ArchLinux](https://github.com/tiagorlampert/InstalandoArchLinux/blob/master/src/pacman.png)
+
+Pacman é o nome do gerenciador de pacotes, o objetivo dele é tornar facil o gerenciamento de pacotes do sistema, ele utiliza pacotes binários `.pkg.tar.xz` com o uso de um sistema de compilação chamado ABS (que será abordado mais tarde).
+
+Alguns comandos que podem ser utilizados:
+>
+	pacman -Sy = atualiza os repositórios;
+	pacman -Su = atualiza a distribuição;
+	pacman -S pacote = instala um pacote;
+	pacman -R pacote = remove um pacote;
+	pacman -Rs pacote = remove o pacote junto com as dependências não usadas por outros pacotes;
+	pacman -Ss pacote = procura por um pacote;
+	pacman -Sw pacote = apenas baixa o pacote e não o instala;
+	pacman -Si pacote = mostra informações de um pacote não instalado;
+	pacman -Qi pacote = mostra informações do pacote já instalado;
+	pacman -Se pacote = instala apenas as dependências;
+	pacman -Ql pacote = mostra todos os arquivos pertencentes ao pacote;
+	pacman -Qu = mostra os pacotes que serão atualizados;
+	pacman -Q = lista todos os pacotes instalados;
+	pacman -Qo arquivo = mostra a qual pacote aquele arquivo pertence;
+	pacman -Sc = deleta do cache todos os pacotes antigos ;
+	pacman -A arquivo.pkg.tar.gz = instala um pacote local;
+	pacman -Scc = limpa o cache, removendo todos os pacotes existentes no /var/cache/pacman/pkg/.
