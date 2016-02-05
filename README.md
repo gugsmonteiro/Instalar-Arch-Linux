@@ -24,7 +24,7 @@ Caso você ainda não tenha conexão com a internet ative o dhcpcd com o comando
 >
 	systemctl start dhcpcd
 
-Caso deseje conectar-se via Wireless utilize o comando `wifi-menu`.
+Caso deseje conectar-se via Wireless utilize o comando `wifi-menu` ou `nmtui` para configurar a sua conexão.
  
 2 - Configurando as partições
 ==========
