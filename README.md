@@ -7,6 +7,7 @@ Requisitos
 ==========
  * Conhecimento Básico em Shell
  * Particionamento de Disco
+ * Gravação de ISO em CD ou Pen drive
  * Conexão com a Internet
  * Vontade
 
@@ -25,6 +26,8 @@ Caso você ainda não tenha conexão com a internet ative o dhcpcd com o comando
 	systemctl start dhcpcd
 
 Caso deseje conectar-se via Wireless utilize o comando `wifi-menu` para configurar a sua conexão.
+>
+	wifi-menu
  
 2 - Configurando as partições
 ==========
@@ -57,7 +60,7 @@ Agora iremos formatar e montar a partição criada.
 
 Execute os seguintes comandos:
 >
-	mkfs.ext4 /dev/sda1  (A partição selecionada será formatada em ext4)
+	mkfs.ext4 /dev/sda1  (A partição informada será formatada em ext4)
 	mount /dev/sda1 /mnt (Será montada a partição em /mnt)
 	mkdir /mnt/home (Será criada a home dentro de /mnt)
 
@@ -78,7 +81,7 @@ Agora iremos formatar e montar as partições criadas.
 Execute os seguintes comandos:
 >
 	mkfs.vfat -F32 /dev/sda1  (Formata e prepara a partição de boot)
-	mkfs.ext4 /dev/sda2 (A partição selecionada será formatada em ext4)
+	mkfs.ext4 /dev/sda2 (A partição informada será formatada em ext4)
 	mount /dev/sda2 /mnt (Será montada a partição sda2 em /mnt)
 	mkdir /mnt/boot (Será criada a pasta boot dentro de /mnt)
 	mkdir /mnt/home (Será criada a pasta home dentro de /mnt)
@@ -106,7 +109,7 @@ Iremos utilizar uma ferramenta do sistema para gerar o fstab automaticamente.
 
 Para gerá-lo execute:
 >
-	genfstab /mnt >> /mnt/etc/fstab
+	genfstab /mnt > /mnt/etc/fstab
 
 Caso desejar você pode visualizar o arquivo ou editá-lo com:
 >
@@ -137,7 +140,7 @@ Após realizar as modificações salve o arquivo.
 
 Em seguida iremos configurar o nosso idioma, criando o arquivo /etc/locale.conf (caso deseje utilizar um idioma diferente adapte o comando de acordo com o desejado).
 
-Execute o comando, para definir o nosso idioma:
+Execute o comando, para definir o idioma:
 >
 	echo LANG=pt_BR.UTF-8 > /etc/locale.conf
 	export LANG=pt_BR.UTF-8
@@ -166,13 +169,14 @@ E definir uma senha de root:
 ==========
 Iremos utilizar o grub, mas caso deseje utilizar outro bootloader podem ser obtidas mais informações na [pagina oficial] (https://wiki.archlinux.org/index.php/Boot_loaders).
 
-Da mesma maneira que no particionamento de disco, que foi dividido em duas partes GPT e MBR, a instalação do grub tambem será divida nessas duas partes. Prossiga de acordo com seu tipo de tabela de partição.
+Da mesma maneira que no particionamento de disco, que foi dividido em duas partes GPT e MBR, a instalação do grub tambem será divida nessas duas partes. Prossiga de acordo com seu tipo de tabela de partição:
 
 ### 5.1 MBR - BIOS
 Será instalado o Grub e os-prober que permite que sejam reconhecidos outros sistemas operacionais instalados na maquina. E em seguida geradas as configurações para o grub.
 
 Execute os seguintes comandos:
 >
+	pacman -Sy
 	pacman -S grub os-prober
 	grub-install /dev/sda
 	mkinitcpio -p linux
@@ -183,6 +187,7 @@ Será instalado o Grub e os-prober que permite que sejam reconhecidos outros sis
 
 Execute os seguintes comandos:
 >
+	pacman -Sy
 	pacman -S grub efibootmgr os-prober
 	grub-install --target=x86_64-efi --efi-directory=boot --bootloader-id=arch_grub
 	grub-mkconfig -o /boot/grub/grub.cfg
@@ -190,7 +195,7 @@ Execute os seguintes comandos:
 
 6 - Configurando o Gerenciador de pacotes Pacman
 ==========
-Definindo algumas configurações adicionais para seu gerenciador de pacotes.
+Iremos definir algumas configurações adicionais para seu gerenciador de pacotes.
 
 Vamos habilitar o repositório multilib, o qual permite ao usuário baixar e executar aplicações 32 e 64 bits.
 
@@ -320,7 +325,7 @@ Alguns comandos que podem ser utilizados:
 	pacman -Se pacote = instala apenas as dependências;
 	pacman -Ql pacote = mostra todos os arquivos pertencentes ao pacote;
 	pacman -Qu = mostra os pacotes que serão atualizados;
-	pacman -Q = lista todos os pacotes instalados;
+	pacman -Q = lista todos os pacotes instalados;https://github.com/tiagorlampert/InstalandoArchLinux.git
 	pacman -Qo arquivo = mostra a qual pacote aquele arquivo pertence;
 	pacman -Sc = deleta do cache todos os pacotes antigos ;
 	pacman -A arquivo.pkg.tar.gz = instala um pacote local;
@@ -384,4 +389,4 @@ Exemplo, para atualizar o sistema:
 
 Após instalar e configurar o básico no sistema ainda resta muita coisa para ser ajustada, é muito importante dar uma olhada em [guia para iniciantes] (https://wiki.archlinux.org/index.php/Beginners%27_guide) e [recomendações gerais] (https://wiki.archlinux.org/index.php/General_recommendations). E veja algo sobre o [pacman] (https://wiki.archlinux.org/index.php/pacman) que é o gerenciador de pacotes do sistema. É claro que a maioria das coisas você só irá aprender com a utilização do sistema, mas é importante ler a documentação da distribuição para se ter uma base teórica de como funciona o Arch.
 
-Arch Linux é um sistema altamente personalizavel, rapido e estavel. Como exige muito da parte do usuário, proporciona um alto nivel de aprendizagem. Permite ao usuário saber como o sistema foi montado, e ver realmente oque acontece no sistema. Você decide oque vai no sistema, não terá coisas desnecessárias que nunca vai chegar a utilizar rodando em seu sistema, sendo assim terá um sistema rápido e estavel. Para mais informações veja [O Jeito Arch] (https://wiki.archlinux.org/index.php/The_Arch_Way_%28Portugu%C3%AAs%29).
+Arch Linux é um sistema altamente personalizavel, rapido e estavel. Como exige muito da parte do usuário, proporciona um alto nivel de aprendizagem. Permite ao usuário saber como o sistema foi montado, e ver realmente oque acontece no sistema. Você decide oque vai no sistema, não terá coisas desnecessárias que nunca vai chegar a utilizar rodando em seu sistema, sendo assim terá um sistema rápido e flexivel. Para mais informações veja [O Jeito Arch] (https://wiki.archlinux.org/index.php/The_Arch_Way_%28Portugu%C3%AAs%29).
