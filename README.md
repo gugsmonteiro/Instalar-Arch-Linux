@@ -49,7 +49,8 @@ A interface de particionamento é essa:
 
 Será criada a seguinte partição:
 >
-	/dev/sda1	 como /		sera bootavel e com o tamanho que desejar
+	/dev/sda1	como /boot		sera bootavel, tamanho 512M
+	/dev/sda2	como /			com o tamanho que desejar	
 
 No `cfdisk` deverá ficar da seguinte forma:
 ![ArchLinux2](https://github.com/tiagorlampert/InstalandoArchLinux/blob/master/src/2.3.png)
@@ -61,8 +62,11 @@ Agora iremos formatar e montar a partição criada.
 Execute os seguintes comandos:
 >
 	mkfs.ext4 /dev/sda1  (A partição informada será formatada em ext4)
-	mount /dev/sda1 /mnt (Será montada a partição em /mnt)
+	mkfs.ext4 /dev/sda2  (A partição informada será formatada em ext4)	
+	mount /dev/sda2 /mnt (Será montada a partição em /mnt)
+	mkdir /mnt/boot (Será criada a pasta boot dentro de /mnt)
 	mkdir /mnt/home (Será criada a home dentro de /mnt)
+	mount /dev/sda1 /mnt/boot (Monta a partição de boot)
 
 ### 2.2 GPT - UEFI
 
