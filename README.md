@@ -329,7 +329,7 @@ Alguns comandos que podem ser utilizados:
 	pacman -Se pacote = instala apenas as dependências;
 	pacman -Ql pacote = mostra todos os arquivos pertencentes ao pacote;
 	pacman -Qu = mostra os pacotes que serão atualizados;
-	pacman -Q = lista todos os pacotes instalados;https://github.com/tiagorlampert/InstalandoArchLinux.git
+	pacman -Q = lista todos os pacotes instalados;
 	pacman -Qo arquivo = mostra a qual pacote aquele arquivo pertence;
 	pacman -Sc = deleta do cache todos os pacotes antigos ;
 	pacman -A arquivo.pkg.tar.gz = instala um pacote local;
