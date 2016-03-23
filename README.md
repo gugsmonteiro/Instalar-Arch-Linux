@@ -272,7 +272,7 @@ Vamos instalar o suporte a Wireless:
 
 Instalar suporte a outros tipos de sistemas de arquivos e discos:
 >
-	pacman -S dosfstools ntfs-3g nilfs-utils mtools gvfs-mtp gpart
+	pacman -S dosfstools ntfs-3g nilfs-utils mtools libmtp gpart
 
 Vamos instalar o driver de video da Intel e suporte a Touchpad se for o seu caso:
 >
