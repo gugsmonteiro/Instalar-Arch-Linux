@@ -198,9 +198,9 @@ Execute os seguintes comandos:
 	mkinitcpio -p linux
 
 ### 5.3 Alternativa ao Grub
-Caso não queira utilizar o grub, ha uma alternativa boa para computadores que possuem suporte a UEFI. Pode ser utilizado o Refind, é um boot-loader eficiente, bonito e que detecta automaticamente os sistemas operacionais instalados na maquina.
+Caso não queira utilizar o grub, existe uma alternativa boa para computadores que possuem suporte a UEFI. Pode ser utilizado o Refind, é um bootloader eficiente, bonito e que detecta automaticamente os sistemas operacionais instalados na maquina.
 
-É necessário que o ponto de montagem da partição de boot seja /boot/efi.
+Para funcionar corretamente é necessário que o ponto de montagem da partição de boot seja /boot/efi.
 Para instalar o Refind execute:
 >
 	pacman -Sy
