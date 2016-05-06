@@ -72,7 +72,7 @@ Execute os seguintes comandos:
 
 Serão criadas as seguintes partições:
 >
-	/dev/sda1	como /boot		com o tamanho de 512M
+	/dev/sda1	como /boot/efi		com o tamanho de 512M
 	/dev/sda2	como /			com o tamanho que desejar
 
 No `cfdisk` devera ficar da seguinte forma:
@@ -87,9 +87,9 @@ Execute os seguintes comandos:
 	mkfs.vfat -F32 /dev/sda1  (Formata e prepara a partição de boot)
 	mkfs.ext4 /dev/sda2 (A partição informada será formatada em ext4)
 	mount /dev/sda2 /mnt (Será montada a partição sda2 em /mnt)
-	mkdir /mnt/boot (Será criada a pasta boot dentro de /mnt)
+	mkdir -p /mnt/boot/efi (Será criada a pasta boot/efi dentro de /mnt)
 	mkdir /mnt/home (Será criada a pasta home dentro de /mnt)
-	mount /dev/sda1 /mnt/boot (Monta a partição de boot)
+	mount /dev/sda1 /mnt/boot/efi (Monta a partição de boot)
 
 3 - Instalando o Sistema Base do Arch Linux
 ==========
