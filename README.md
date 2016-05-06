@@ -197,6 +197,18 @@ Execute os seguintes comandos:
 	grub-mkconfig -o /boot/grub/grub.cfg
 	mkinitcpio -p linux
 
+### 5.3 Alternativa ao Grub
+Caso não queira utilizar o grub, ha uma alternativa boa para computadores que possuem suporte a UEFI. Pode ser utilizado o Refind, é um boot-loader eficiente, bonito e que detecta automaticamente os sistemas operacionais instalados na maquina.
+
+É necessário que o ponto de montagem da partição de boot seja /boot/efi.
+Para instalar o Refind execute:
+>
+	pacman -Sy
+	pacman -S refind-efi efibootmgr
+	refind-install (Instala Refind)
+
+![ArchLinux](https://github.com/tiagorlampert/InstalandoArchLinux/blob/master/src/refind.png)
+
 6 - Configurando o Gerenciador de pacotes Pacman
 ==========
 Iremos definir algumas configurações adicionais para seu gerenciador de pacotes.
