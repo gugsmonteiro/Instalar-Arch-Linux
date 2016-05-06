@@ -165,6 +165,10 @@ Vamos definir um hostname para a maquina:
 >
 	echo Arch > /etc/hostname
 
+Criando um usuário (o comando abaixo cria e adiciona o usuário em varios grupos, verifique qual você deseja):
+>
+	useradd -m -G wheel,storage,power,network,video,audio,disk,lp -s /bin/bash 'nome_usuario'
+
 E definir uma senha de root:
 >
 	passwd
