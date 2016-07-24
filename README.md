@@ -9,7 +9,6 @@ Requisitos
  * Particionamento de Disco
  * Gravação de ISO em CD ou Pen drive
  * Conexão com a Internet
- * Vontade
 
 1 - Obtendo a ISO de instalação do Arch Linux
 ==========
@@ -342,13 +341,11 @@ Alguns comandos que podem ser utilizados:
 	pacman -Sw pacote = apenas baixa o pacote e não o instala;
 	pacman -Si pacote = mostra informações de um pacote não instalado;
 	pacman -Qi pacote = mostra informações do pacote já instalado;
-	pacman -Se pacote = instala apenas as dependências;
 	pacman -Ql pacote = mostra todos os arquivos pertencentes ao pacote;
 	pacman -Qu = mostra os pacotes que serão atualizados;
 	pacman -Q = lista todos os pacotes instalados;
 	pacman -Qo arquivo = mostra a qual pacote aquele arquivo pertence;
 	pacman -Sc = deleta do cache todos os pacotes antigos ;
-	pacman -A arquivo.pkg.tar.gz = instala um pacote local;
 	pacman -Scc = limpa o cache, removendo todos os pacotes existentes no /var/cache/pacman/pkg/;
 
 ### 9.2 AUR (Arch User Repository)
@@ -384,6 +381,18 @@ E execute o makepkg para compilar o programa e instalar:
 
 ***Após ter feito isso repita o procedimento com o Yaourt.***
 
+Volte para o diretório anterior:
+>
+	cd ..
+
+Entre dentro da pasta do Yaourt:
+>
+	cd yaourt
+
+E execute o makepkg para compilar o programa e instalar:
+>
+	makepkg -sic
+
 Isso é o básico para se saber como baixar e compilar um pacote manualmente do AUR.
 
 
@@ -401,6 +410,7 @@ Exemplo, para atualizar o sistema:
 >
 	pacman -Syu
 	yaourt -Syua
+
 
 10 - Finalizando
 ==========
