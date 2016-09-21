@@ -196,7 +196,7 @@ Execute os seguintes comandos:
 >
 	pacman -Sy
 	pacman -S grub efibootmgr os-prober
-	grub-install --target=x86_64-efi --efi-directory=boot --bootloader-id=arch_grub
+	grub-install /dev/sda
 	grub-mkconfig -o /boot/grub/grub.cfg
 	mkinitcpio -p linux
 
