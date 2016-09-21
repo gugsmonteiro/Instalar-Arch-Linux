@@ -282,7 +282,7 @@ Execute os comandos abaixo para instalar o servidor grafico, suporte a 3D e audi
 
 Vamos instalar o suporte a Wireless:
 >
-	pacman -S networkmanager network-manager-applet
+	pacman -S networkmanager network-manager-applet gnome-keyring
 	systemctl enable NetworkManager.service
 
 Instalar suporte a outros tipos de sistemas de arquivos e discos:
