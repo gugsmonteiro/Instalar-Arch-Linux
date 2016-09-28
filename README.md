@@ -166,7 +166,7 @@ Vamos definir um hostname para a maquina:
 
 Criando um usuário (o comando abaixo cria e adiciona o usuário em varios grupos, verifique qual você deseja):
 >
-	useradd -m -G wheel,storage,power,network,video,audio,disk,lp -s /bin/bash nome_usuario
+	useradd -m -G wheel -s /bin/bash nome_usuario
 
 E definir uma senha de root:
 >
@@ -196,7 +196,7 @@ Execute os seguintes comandos:
 >
 	pacman -Sy
 	pacman -S grub efibootmgr os-prober
-	grub-install --target=x86_64-efi --efi-directory=boot --bootloader-id=arch_grub
+	grub-install /dev/sda
 	grub-mkconfig -o /boot/grub/grub.cfg
 	mkinitcpio -p linux
 
@@ -282,7 +282,7 @@ Execute os comandos abaixo para instalar o servidor grafico, suporte a 3D e audi
 
 Vamos instalar o suporte a Wireless:
 >
-	pacman -S networkmanager network-manager-applet
+	pacman -S networkmanager network-manager-applet gnome-keyring
 	systemctl enable NetworkManager.service
 
 Instalar suporte a outros tipos de sistemas de arquivos e discos:
